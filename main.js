@@ -28,9 +28,6 @@ var preList = ["Experienced In Saving You Money.",
 window.addEventListener("load", start, false);
 function start() {
 	imgg()
-
-
-
 	curr = 0
 	$('pre').innerHTML = "<span>" + preList[curr] +"</span";
 	window.setInterval(function() {
@@ -59,13 +56,12 @@ function start() {
 }
 function imgg() {
   imagess = ["fiveOaks.jpg", "1.jpg", "2.jpg", "3.jpg","4.jpg", "5.jpg","6.jpg","7.jpg","8.jpg"]
-  captions = ["1", "2", "3", "4", "5", "6","7","8","9"]
   imgSlide = document.getElementById("imgSlide")
   dot = document.getElementsByClassName("dot")
   for (i = 0; i < 9; i++) {
     dot[i].id = "";
   } 
-  imgSlide.setAttribute("src", "fiveOaksImg/"+imagess[indexx]);
+  imgSlide.setAttribute("src", imagess[indexx]);
   
   dot[indexx].id = "active";
 }
@@ -90,7 +86,7 @@ var indexx = 0
 
 markup = ""
 for (var i=0; i<=29; ++i) {
-  markup += "<div><img src='promo/" + i + ".jpg'>" +
+  markup += "<div><img src='" + i + ".jpg'>" +
   				"<div class='texts'><h3>An example of promo</h3>"+
   				"<p>Location:Thissisjs<p>" +
   				"<p>Contact: -$+#8#8#+$+</p></div>" +
